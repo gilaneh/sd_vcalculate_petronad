@@ -150,8 +150,8 @@ class SdVcalculatePetronad(models.Model):
             # ww
             elif rec.variable_name == 'ww_production':
                 production_sum = meg_production + deg_production + teg_production + h1_production + h2_production
-                ww_production = round(production_sum, 2)
-                value = self.float_num(production_sum, 2)
+                ww_production = round(feed_out - production_sum, 2)
+                value = self.float_num(ww_production, 2)
 
 
             elif rec.variable_name == 'ww_feed':
