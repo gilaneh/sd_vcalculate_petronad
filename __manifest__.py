@@ -24,6 +24,7 @@
 
     # always loaded
     'data': [
+        'security/ir.model.access.csv',
         ],
     'assets': {
         'web._assets_common_scripts': [

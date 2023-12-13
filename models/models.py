@@ -12,6 +12,7 @@ class SdVcalculatePetronad(models.Model):
     def calculate(self, diagram, start_date, end_date):
         print(f'calculate \n CALCULATE {diagram} \n {diagram.values} '
               f'\n {sorted(diagram.values, key=lambda val: val["sequence"])}')
+        return
         date_format = '%Y/%m/%d'
         calendar = self.env.context.get('lang')
         # report_date = datetime.strptime(report_date, date_format).date()
