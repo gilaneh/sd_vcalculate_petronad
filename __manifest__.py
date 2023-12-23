@@ -3,7 +3,7 @@
     'name': "sd_vcalculate_petronad",
 
     'summary': """
-        It will show the jalaali date for most of date fields""",
+        """,
 
     'description': """
         
@@ -17,7 +17,7 @@
     'category': 'Service Desk/Service Desk',
     'application': True,
     'installable': True,
-    'version': '1.0.1',
+    'version': '1.1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'web', 'km_data', 'sd_visualize', ],
