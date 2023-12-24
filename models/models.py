@@ -271,7 +271,7 @@ class SdVcalculateDataPetronad(models.Model):
 
         results = []
         for rec in sorted_values:
-            print(f'hhhhhhhhhh {rec.sequence}  {rec.variable_name}')
+            # print(f'hhhhhhhhhh {rec.sequence}  {rec.variable_name}')
             if not rec.calculate:
                 continue
 
@@ -279,6 +279,27 @@ class SdVcalculateDataPetronad(models.Model):
                 value = s_start_date
             elif rec.variable_name == 'last_date':
                 value = s_end_date
+            elif rec.variable_name == 'feed_production':
+                trace1 = {
+                    'x': ['Two days before', 'The day before', 'That day'],
+                    'y': [25, 28, 23],
+                    'name': 'Feed',
+                    'type': 'bar'
+                };
+                trace2 = {
+                    'x': ['Two days before', 'The day before', 'That day'],
+                    'y': [14, 12, 12],
+                    'name': 'MEG',
+                    'type': 'bar'
+                };
+                trace3 = {
+                    'x': ['Two days before', 'The day before', 'That day'],
+                    'y': [11, 10, 9],
+                    'name': 'H1',
+                    'type': 'bar'
+                };
+
+                value = json.dumps([trace1, trace2, trace3])
             # FEED
             # elif rec.variable_name == 'feed_in':
             #     value = self.float_num(sum(feeds_in), 2)
