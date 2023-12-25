@@ -20,7 +20,7 @@
     'version': '1.1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'web', 'km_data', 'sd_visualize', ],
+    'depends': ['base', 'web', 'km_data', 'sd_visualize', 'sd_vcalculate' ],
 
     # always loaded
     'data': [
